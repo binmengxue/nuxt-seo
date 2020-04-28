@@ -44,3 +44,13 @@ head () {
     }
    },
  ```
+##  点击列表页面中某个LI，进入详情页面，携带数据，详情页面刷新的时候数据丢失问题
+``` python
+  beforeRouteEnter(to,from,next){
+    next(vm=>{
+      vm.obj=JSON.parse(to.query.obj)//obj是携带的数据
+    })
+  },
+  mounted() {
+  }
+ ```
