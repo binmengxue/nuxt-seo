@@ -5,6 +5,7 @@
 #### npm install
 #### npm run dev
 # 开发中重点代码
+##  同个组件不同路由参数显示不同内容
 ``` python
  created() {
       this.activeName=this.$route.query.type
@@ -26,4 +27,20 @@
          this.tabTitle=e.label
       }
    }
+ ```
+##  静态化SEO设置
+``` python
+created(){
+      
+},
+head () {
+    return {
+      title: '我是首页这是官网1',
+      meta: [
+       { charset: 'utf-8' },
+       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+       { hid: 'description', name: 'description', content: 'Meta description' }
+      ]
+    }
+   },
  ```
