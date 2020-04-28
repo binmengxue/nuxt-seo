@@ -1,0 +1,257 @@
+/*禁止app黏贴功能*/
+body {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  [contenteditable='true'],
+  input,
+  textarea {
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  p,
+  blockquote,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  pre,
+  code,
+  form,
+  fieldset,
+  legend,
+  button,
+  input,
+  textarea {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+  }
+.flex{
+    display: -webkit-flex; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-flex; /* 老版本语法: Firefox (buggy) */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  /*主轴居中*/
+  .justify-content {
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .justify-start {
+      -webkit-box-pack: start;
+      -moz-justify-content: flex-start;
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start;
+  }
+  /*主轴居右*/
+  .justify-end {
+      -webkit-box-pack: end;
+      -moz-justify-content: flex-end;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+  }
+  /*主轴左右不留白*/
+  .justify-between {
+      -webkit-box-pack: justify;
+      -moz-justify-content: space-between;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+  }
+  /*主轴左右留白*/
+ .justif-around {
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+  /*交叉轴居中对齐*/
+ .align-center {
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  /*交叉轴居左对齐*/
+  .align-start {
+    -webkit-box-align: start;
+    -moz-align-items: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+  /*交叉轴居右对齐*/
+  .align-end {
+    -webkit-box-align: end;
+    -moz-align-items: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+  /* 父元素-横向排列（主轴） */
+.flex-h {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+/* 父元素-横向换行 */
+.flex-hw {
+  /* 09版 */
+  /*-webkit-box-lines: multiple;*/
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* 父元素-水平居中（主轴是横向才生效） */
+.flex-hc {
+  /* 09版 */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+  li {
+    vertical-align: bottom;
+    list-style-type: none;
+  }
+  /* 自动换行 */
+  .word-auto {
+    word-wrap: break-word;
+    word-break: normal;
+  }
+  /* clearfix */
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+  .clearfix {
+    *zoom: 1;
+  }
+  input,
+  textarea {
+    -webkit-appearance: none; /*去除苹果input内阴影*/
+  }
+  html {
+    height: 100%;
+    width: 100%;
+ 
+  }
+  body {
+    height: 100%;
+    width: 100%;
+  
+  }
+  /*头部导航样式*/
+  .el-menu.el-menu--horizontal{
+    border-bottom: solid 1px #fff!important;
+  }
+  .el-menu--horizontal>.el-menu-item{
+    font-size: 16px!important;
+    height:120px!important;
+    line-height: 120px!important;
+    text-align: center!important;
+    color: #222222!important;
+    border-bottom:4px solid #fff;
+  }
+  .el-menu--horizontal>.el-menu-item.is-active{
+    border-bottom:0px solid#640000!important;
+  }
+  .el-menu--horizontal>.el-menu-item:hover{
+    border-bottom:4px solid#640000!important;
+  }
+  .el-menu--popup-bottom-start{
+    margin-top: 0px!important;
+  }
+  .el-menu--horizontal>.el-submenu .el-submenu__title{
+    font-size: 16px!important;
+    height:120px!important;
+    line-height: 120px!important;
+    text-align: center!important;
+    color: #222222!important;
+    border-bottom:4px solid #fff;
+   }
+   .el-menu--horizontal .el-menu .el-menu-item{
+    font-size:16px!important;
+    text-align: center;
+    height: 50px!important;
+    line-height: 50px!important;
+   }
+   .el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
+    border-bottom:4px solid#640000!important;
+   }
+   .el-menu--horizontal .el-menu .el-menu-item:hover{
+     background-color: #efeeee!important;
+     
+   }
+   .business-info .el-tabs__item{
+        padding:0px 40px !important;
+        height:60px!important;
+        line-height:60px!important ;
+        background: #f5f5f5!important ;
+        font-size: 16px;
+    }
+    .business-info .el-tabs__item.is-active{
+      color:#640000!important;
+    }
+    .business-info .el-tabs__item:hover{
+      color:#640000!important;
+      background: #ffffff!important;
+    }
+    .business-info .el-tabs__active-bar{
+      background-color:#640000!important;
+    }
+    .el-tabs__content{
+      text-align: left;
+      padding:20px 20px;
+    }
+    .el-tabs--left .el-tabs__header.is-left{
+      padding-top:80px;
+    }
+ 
