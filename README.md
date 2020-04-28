@@ -5,6 +5,7 @@
 #### npm install
 #### npm run dev
 # 开发中重点代码
+``` python
  created() {
       this.activeName=this.$route.query.type
    },
@@ -25,3 +26,4 @@
          this.tabTitle=e.label
       }
    }
+ ```
